@@ -61,7 +61,14 @@ Process finished with exit code 1
 修改后有一行警告提示
 ⚠语法已经过期\
 旧语法如下：
-
-
-
-⚠语法已经过期
+```
+	<property name="driver" value="com.mysql.jdbc.Driver"/>
+```
+新语法如下:
+```
+	<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+```
+使用新语法有可能出现问题，要记得设置url设置时区
+```
+	?serverTimezone=UTC
+```
